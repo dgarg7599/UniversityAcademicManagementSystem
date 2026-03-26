@@ -12,28 +12,35 @@ namespace UniversityAcademicManagementSystem.Models
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int StudentId { get; set; }
 
-		[Required]
-		[StringLength(100)]
-		public string Name { get; set; }
+		[Required(ErrorMessage = "UserId is required")]
+		[ForeignKey("User")]
+        public int UserId { get; set; }
 
-		[Required]
-		[StringLength(100)]
-		[EmailAddress]
-		public string Email { get; set; }
+        [Required(ErrorMessage = "Name is required")]
+        [StringLength(100)]
+        public string Name { get; set; }
 
-		[Required]
-		[StringLength(100)]
-		public string Department { get; set; }
+        [Required(ErrorMessage = "Email address is required")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        [MaxLength(120)]
+        public string Email { get; set; }
 
-		[Required]
-		[StringLength(20)]
-		[Phone]
-		public string ContactNumber { get; set; }
+        [Required(ErrorMessage = "Department is required")]
+        [StringLength(100)]
+        public string Department { get; set; }
 
-		[Required]
-		public int EnrollmentYear { get; set; }
+        [Required(ErrorMessage = "Contact number is required")]
+        [StringLength(20)]
+        [Phone(ErrorMessage = "Invalid phone number")]
+        public string ContactNumber { get; set; }
 
-		public ICollection<Enrollment> Enrollments { get; set; }
+        [Required(ErrorMessage = "Enrollment year is required")]
+        [Range(2000, 2100, ErrorMessage = "Please enter a valid year between 2000 and 2100")]
+        public int EnrollmentYear { get; set; }
+
+        public User User { get; set; }
+
+        public ICollection<Enrollment> Enrollments { get; set; }
 		public ICollection<Grade> Grades { get; set; }
 		public ICollection<AcademicRecord> AcademicRecords { get; set; }
 	}

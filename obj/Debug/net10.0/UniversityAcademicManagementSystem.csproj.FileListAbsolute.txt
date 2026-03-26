@@ -12,7 +12,10 @@ C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Humanizer.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Build.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Build.Tasks.Core.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Build.Utilities.Core.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -34,6 +37,7 @@ C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.NET.StringTools.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Mono.TextTemplating.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Newtonsoft.Json.dll
@@ -45,9 +49,14 @@ C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Composition.Runtime.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Composition.TypedParts.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Formats.Nrbf.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Resources.Extensions.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Security.Permissions.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Windows.Extensions.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -131,6 +140,7 @@ C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.csproj.AssemblyReference.cache
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\rpswa.dswa.cache.json
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
@@ -140,6 +150,7 @@ C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.RazorAssemblyInfo.cache
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.RazorAssemblyInfo.cs
+C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.sourcelink.json
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -222,14 +233,3 @@ C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.pdb
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.genruntimeconfig.cache
 C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\ref\UniversityAcademicManagementSystem.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Build.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Build.Tasks.Core.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.Build.Utilities.Core.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\Microsoft.NET.StringTools.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Formats.Nrbf.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Reflection.MetadataLoadContext.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Resources.Extensions.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Security.Permissions.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\System.Windows.Extensions.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
-C:\Users\2475938\OneDrive - Cognizant\Desktop\UniversityAcademicManagementSystem\obj\Debug\net10.0\UniversityAcademicManagementSystem.sourcelink.json

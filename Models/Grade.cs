@@ -11,19 +11,20 @@ namespace UniversityAcademicManagementSystem.Models
 		public int GradeId { get; set; }
 
 		[ForeignKey("Student")]
-		[Required]
+		[Required(ErrorMessage = "StudentId is required")]
 		public int StudentId { get; set; }
 
 		[ForeignKey("Course")]
-		[Required]
+		[Required(ErrorMessage = "CourseId is required")]
 		public int CourseId { get; set; }
 
-		[Required]
-		[StringLength(5)]
-		public string GradeValue { get; set; }
+        [Required(ErrorMessage = "Grade is required")]
+        [StringLength(1, ErrorMessage = "Grade must be exactly 1 character")]
+        [RegularExpression(@"^[A-F]$", ErrorMessage = "Grade must be a single letter from A to F")]
+        public string GradeValue { get; set; }
 
-		[StringLength(255)]
-		public string Remarks { get; set; }
+		[StringLength(255, ErrorMessage = "Remarks cannot exceed 255 characters")]
+		public string? Remarks { get; set; }
 
 		public Student Student { get; set; }
 		public Course Course { get; set; }

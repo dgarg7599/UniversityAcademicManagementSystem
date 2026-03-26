@@ -11,15 +11,15 @@ namespace UniversityAcademicManagementSystem.Models
 		public int EnrollmentId { get; set; }
 
 		[ForeignKey("Student")]
-		[Required]
+		[Required(ErrorMessage = "StudentId is required")]
 		public int StudentId { get; set; }
 
 		[ForeignKey("Course")]
-		[Required]
+		[Required(ErrorMessage = "CourseId is required")]
 		public int CourseId { get; set; }
 
-		[Required]
-		public EnrollmentStatus EnrollmentStatus { get; set; }
+		[Required(ErrorMessage = "Enrollment status must be specified")]
+		public EnrollmentStatus EnrollmentStatus { get; set; } = EnrollmentStatus.ENROLLED;
 
 		public Student Student { get; set; }
 		public Course Course { get; set; }

@@ -12,21 +12,21 @@ namespace UniversityAcademicManagementSystem.Models
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int CourseId { get; set; }
 
-		[Required]
+		[Required(ErrorMessage = "Course Name is required")]
 		[StringLength(100)]
 		public string CourseName { get; set; }
 
-		[Required]
-		[Range(1, 10)]
+		[Required(ErrorMessage = "Credits are required")]
+		[Range(1, 10, ErrorMessage = "Credits must be between 1 and 10")]
 		public int Credits { get; set; }
 
-		[Required]
+		[Required(ErrorMessage = "Department is required")]
 		[StringLength(100)]
 		public string Department { get; set; }
 
-		[Required]
-		[StringLength(20)]
-		public string SemesterOffered { get; set; }
+        [Required(ErrorMessage = "Semester is required")]
+        [StringLength(1, ErrorMessage = "Semester must be a single digit")]
+        public string SemesterOffered { get; set; }
 
 		public ICollection<Enrollment> Enrollments { get; set; }
 		public ICollection<Grade> Grades { get; set; }
