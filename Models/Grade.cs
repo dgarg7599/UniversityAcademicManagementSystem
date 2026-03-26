@@ -21,7 +21,7 @@ namespace UniversityAcademicManagementSystem.Models
         [Required(ErrorMessage = "Grade is required")]
         [StringLength(1, ErrorMessage = "Grade must be exactly 1 character")]
         [RegularExpression(@"^[A-F]$", ErrorMessage = "Grade must be a single letter from A to F")]
-        public string GradeValue { get; set; }
+        public string GradeValue { get; set; } = string.Empty;
 
 		[StringLength(255, ErrorMessage = "Remarks cannot exceed 255 characters")]
 		public string? Remarks { get; set; }

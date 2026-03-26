@@ -18,21 +18,21 @@ namespace UniversityAcademicManagementSystem.Models
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Email address is required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         [MaxLength(120)]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Department is required")]
         [StringLength(100)]
-        public string Department { get; set; }
+        public string Department { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Contact number is required")]
         [StringLength(20)]
         [Phone(ErrorMessage = "Invalid phone number")]
-        public string ContactNumber { get; set; }
+        public string ContactNumber { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Enrollment year is required")]
         [Range(2000, 2100, ErrorMessage = "Please enter a valid year between 2000 and 2100")]

@@ -14,7 +14,7 @@ namespace UniversityAcademicManagementSystem.Models
 
 		[Required(ErrorMessage = "Course Name is required")]
 		[StringLength(100)]
-		public string CourseName { get; set; }
+		public string CourseName { get; set; } = string.Empty;
 
 		[Required(ErrorMessage = "Credits are required")]
 		[Range(1, 10, ErrorMessage = "Credits must be between 1 and 10")]
@@ -22,11 +22,11 @@ namespace UniversityAcademicManagementSystem.Models
 
 		[Required(ErrorMessage = "Department is required")]
 		[StringLength(100)]
-		public string Department { get; set; }
+		public string Department { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Semester is required")]
-        [StringLength(1, ErrorMessage = "Semester must be a single digit")]
-        public string SemesterOffered { get; set; }
+		[Required(ErrorMessage = "Semester is required")]
+		[StringLength(1, ErrorMessage = "Semester must be a single digit")]
+		public string SemesterOffered { get; set; } = string.Empty;
 
 		public ICollection<Enrollment> Enrollments { get; set; }
 		public ICollection<Grade> Grades { get; set; }

@@ -21,11 +21,11 @@ namespace UniversityAcademicManagementSystem.Models
 		[Required(ErrorMessage="Grade is required")]
         [StringLength(1, ErrorMessage = "Grade must be exactly 1 character")]
         [RegularExpression(@"^[A-F]$", ErrorMessage = "Grade must be a single letter from A to F")]
-        public string Grade { get; set; }
+        public string Grade { get; set; } = string.Empty;
 
 		[Required(ErrorMessage = "Semester is required")]
         [StringLength(1, ErrorMessage = "Semester must be a single digit")]
-        public string Semester { get; set; }
+        public string Semester { get; set; } = string.Empty;
 
 		public Student Student { get; set; }
 		public Course Course { get; set; }
