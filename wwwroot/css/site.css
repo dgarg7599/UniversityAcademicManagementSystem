@@ -1,31 +1,78 @@
-html {
-  font-size: 14px;
+:root {
+    --portal-navy: #0f172a;
+    --portal-emerald: #10b981;
+    --portal-slate: #f8fafc;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Body */
 body {
-  margin-bottom: 60px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--portal-slate);
+    color: #334155;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Navbar */
+.navbar {
+    background: var(--portal-navy) !important;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
+
+.nav-link {
+    font-weight: 500;
+    color: rgba(255,255,255,0.8) !important;
+    margin: 0 5px;
+    transition: all 0.2s ease;
+}
+
+    .nav-link:hover {
+        color: var(--portal-emerald) !important;
+    }
+
+/* Logo Box */
+.logo-box {
+    background: var(--portal-emerald);
+}
+
+/* Login Button */
+.btn-login {
+    border: 2px solid var(--portal-emerald);
+    border-radius: 10px;
+    padding: 6px 22px !important;
+    color: #fff !important;
+    background: transparent;
+    font-weight: 600;
+}
+
+    .btn-login:hover {
+        background: var(--portal-emerald);
+        color: #fff !important;
+        transform: translateY(-1px);
+    }
+
+/* Footer */
+footer {
+    background: #fff;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Card hover effect */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1.5rem !important;
+    border: none;
+    overflow: hidden;
+}
+
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+    }

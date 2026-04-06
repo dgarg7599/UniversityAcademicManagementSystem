@@ -27,7 +27,7 @@ namespace UniversityAcademicManagementSystem.Models
         [StringLength(1, ErrorMessage = "Semester must be a single digit")]
         public string Semester { get; set; } = string.Empty;
 
-		public Student Student { get; set; }
-		public Course Course { get; set; }
+		public Student? Student { get; set; }
+		public Course? Course { get; set; }
 	}
 }

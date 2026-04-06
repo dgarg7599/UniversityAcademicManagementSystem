@@ -21,7 +21,7 @@ namespace UniversityAcademicManagementSystem.Models
 		[Required(ErrorMessage = "Enrollment status must be specified")]
 		public EnrollmentStatus EnrollmentStatus { get; set; } = EnrollmentStatus.ENROLLED;
 
-		public Student Student { get; set; }
-		public Course Course { get; set; }
+		public Student? Student { get; set; }
+		public Course? Course { get; set; }
 	}
 }

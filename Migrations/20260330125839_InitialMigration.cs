@@ -5,7 +5,7 @@
 namespace UniversityAcademicManagementSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class UniversityDb : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,7 +33,7 @@ namespace UniversityAcademicManagementSystem.Migrations
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Email = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
-                    PasswordHash = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
                     Role = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
                 },
                 constraints: table =>

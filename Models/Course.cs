@@ -26,10 +26,11 @@ namespace UniversityAcademicManagementSystem.Models
 
 		[Required(ErrorMessage = "Semester is required")]
 		[StringLength(1, ErrorMessage = "Semester must be a single digit")]
+		[Range(1, 8, ErrorMessage = "Semester must be between 1 and 8")]
 		public string SemesterOffered { get; set; } = string.Empty;
 
-		public ICollection<Enrollment> Enrollments { get; set; }
-		public ICollection<Grade> Grades { get; set; }
-		public ICollection<AcademicRecord> AcademicRecords { get; set; }
+		public ICollection<Enrollment>? Enrollments { get; set; }
+		public ICollection<Grade>? Grades { get; set; }
+		public ICollection<AcademicRecord>? AcademicRecords { get; set; }
 	}
 }

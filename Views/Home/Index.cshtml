@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "ABC University";
+}
+
+<div class="container mt-4">
+    <!-- Hero Section -->
+    <div class="bg-dark text-white rounded-3 p-5 mb-5 shadow-lg rounded-4 border-0">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-4 fw-bold mb-3">ABC University</h1>
+                <p class="lead mb-4" style="max-width: 600px; font-family: 'Lucida Calligraphy'">
+                    Where education meets opportunity!
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a asp-controller="Home" asp-action="Register" class="btn btn-success btn-lg px-5 fw-bold shadow-sm card-hover">Get Started</a>
+                    <a asp-controller="Home" asp-action="Courses" class="btn btn-outline-light btn-lg px-4 card-hover">
+                        <i class="bi bi-search me-2"></i>Browse Catalog
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 d-none d-md-block text-center">
+                <i class="bi bi-mortarboard" style="font-size: 8rem; color: #10b981; opacity: 0.2;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="d-flex align-items-center mb-4">
+        <h3 class="fw-bold mb-0 text-dark me-4">System Modules</h3>
+        <div class="flex-grow-1 border-bottom"></div>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4">
+        <!-- Profile -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm card-hover rounded-4 border-0">
+                <div class="card-body p-4">
+                    <div class="mb-3 text-primary">
+                        <i class="bi bi-person-vcard fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold">Student Profile</h5>
+                    <p class="text-muted small">Access and update your profile details anytime.</p>
+                    <a asp-controller="Home" asp-action="Login" class="stretched-link fw-bold text-primary">Manage Profile →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Catalog -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm card-hover rounded-4 border-0">
+                <div class="card-body p-4">
+                    <div class="mb-3 text-success">
+                        <i class="bi bi-journal-bookmark-fill fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold">Course Catalog</h5>
+                    <p class="text-muted small">Browse available courses and academic programs.</p>
+                    <a asp-controller="Home" asp-action="Courses" class="stretched-link fw-bold text-success">Explore Courses →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enrollment -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm card-hover rounded-4 border-0">
+                <div class="card-body p-4">
+                    <div class="mb-3 text-info">
+                        <i class="bi bi-plus-circle-dotted fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold">Enrollment</h5>
+                    <p class="text-muted small">Enroll in courses and shape your academic path.</p>
+                    <a asp-controller="Home" asp-action="Login" class="stretched-link fw-bold text-info">Enroll Now →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

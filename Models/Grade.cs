@@ -26,7 +26,7 @@ namespace UniversityAcademicManagementSystem.Models
 		[StringLength(255, ErrorMessage = "Remarks cannot exceed 255 characters")]
 		public string? Remarks { get; set; }
 
-		public Student Student { get; set; }
-		public Course Course { get; set; }
+		public Student? Student { get; set; }
+		public Course? Course { get; set; }
 	}
 }

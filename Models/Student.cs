@@ -38,10 +38,10 @@ namespace UniversityAcademicManagementSystem.Models
         [Range(2000, 2100, ErrorMessage = "Please enter a valid year between 2000 and 2100")]
         public int EnrollmentYear { get; set; }
 
-        public User User { get; set; }
+        public User? User { get; set; }
 
-        public ICollection<Enrollment> Enrollments { get; set; }
-		public ICollection<Grade> Grades { get; set; }
-		public ICollection<AcademicRecord> AcademicRecords { get; set; }
+        public ICollection<Enrollment>? Enrollments { get; set; }
+		public ICollection<Grade>? Grades { get; set; }
+		public ICollection<AcademicRecord>? AcademicRecords { get; set; }
 	}
 }

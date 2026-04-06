@@ -1,0 +1,79 @@
+﻿@using UniversityAcademicManagementSystem.Models
+@model User
+
+@{
+    ViewData["Title"] = "Add New Staff - ABC University";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<div class="container-fluid d-flex align-items-center justify-content-center min-vh-100" style="background-color: var(--portal-slate);">
+    
+    <div class="card shadow-sm border-0 p-4 p-md-5" style="max-width: 500px; width: 100%; border-radius: 24px; background: #fff;">
+        
+        <div class="text-center mb-4">
+            <div class="d-inline-block p-3 rounded-circle mb-3" style="background: rgba(16, 185, 129, 0.1);">
+                <i class="bi bi-person-plus-fill" style="font-size: 2.2rem; color: var(--portal-emerald);"></i>
+            </div>
+            <h2 class="fw-bold" style="color: var(--portal-navy); letter-spacing: -1px;">Add New Staff</h2>
+            <p class="text-muted small">Enter details to create a Faculty or Registrar account.</p>
+        </div>
+
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+
+            <div class="mb-3">
+                <label class="form-label fw-600 text-secondary small mb-1" asp-for="Email">Email Address</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                        <i class="bi bi-envelope text-muted"></i>
+                    </span>
+                    <input asp-for="Email" class="form-control border-start-0 py-2" placeholder="staff@abc.edu" style="border-radius: 0 12px 12px 0;" />
+                </div>
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-600 text-secondary small mb-1" asp-for="Password">Initial Password</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                        <i class="bi bi-lock text-muted"></i>
+                    </span>
+                    <input asp-for="Password" type="password" class="form-control border-start-0 py-2" placeholder="••••••••" style="border-radius: 0 12px 12px 0;" />
+                </div>
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-600 text-secondary small mb-1" asp-for="Role">Assign Role</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                        <i class="bi bi-person-badge text-muted"></i>
+                    </span>
+        
+                    <select asp-for="Role" class="form-select border-start-0 py-2" style="border-radius: 0 12px 12px 0;">
+                        <option value="">-- Select Role --</option>
+                        <option value="Faculty">Faculty</option>
+                        <option value="Registrar">Registrar</option>
+                    </select>
+                </div>
+                <span asp-validation-for="Role" class="text-danger small"></span>
+            </div>
+
+            <button type="submit" class="btn w-100 py-2 fw-bold text-white shadow-sm mb-3"
+                    style="background-color: var(--portal-emerald); border-radius: 12px;">
+                Create Account <i class="bi bi-check2-circle ms-1"></i>
+            </button>
+
+            <a asp-action="Index" class="btn btn-light w-100 py-2 fw-600 border" style="border-radius: 12px;">
+                <i class="bi bi-arrow-left me-1"></i> Back to Dashboard
+            </a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

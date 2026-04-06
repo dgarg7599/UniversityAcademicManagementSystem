@@ -1,0 +1,95 @@
+﻿@model Student
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Complete Profile - ABC University";
+}
+
+<div class="container-fluid d-flex align-items-center justify-content-center min-vh-100" style="background-color: var(--portal-slate);">
+    
+    <div class="card shadow-sm border-0 p-4 p-md-5" style="max-width: 550px; width: 100%; border-radius: 24px;">
+        
+        <div class="text-center mb-4">
+            <div class="d-inline-block p-3 rounded-circle mb-3" style="background: rgba(16, 185, 129, 0.1);">
+                <i class="bi bi-person-check-fill" style="font-size: 2.2rem; color: var(--portal-emerald);"></i>
+            </div>
+            <h2 class="fw-bold" style="color: var(--portal-navy); letter-spacing: -1px;">Finish Setting Up!</h2>
+            <p class="text-muted small">Update your details to unlock the student portal.</p>
+        </div>
+
+        <form asp-action="CompleteProfile" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold text-secondary small mb-1" asp-for="Name">Full Name</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                        <i class="bi bi-person text-muted"></i>
+                    </span>
+                    <input asp-for="Name" class="form-control border-start-0 py-2" placeholder="Enter your full name" style="border-radius: 0 12px 12px 0;" required />
+                </div>
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold text-secondary small mb-1" asp-for="ContactNumber">Contact Number</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                            <i class="bi bi-telephone text-muted"></i>
+                        </span>
+                        <input asp-for="ContactNumber" class="form-control border-start-0 py-2" placeholder="9876543210" style="border-radius: 0 12px 12px 0;" required />
+                    </div>
+                    <span asp-validation-for="ContactNumber" class="text-danger small"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold text-secondary small mb-1" asp-for="EnrollmentYear">Enrollment Year</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                            <i class="bi bi-calendar-event text-muted"></i>
+                        </span>
+                        <input asp-for="EnrollmentYear" type="number" class="form-control border-start-0 py-2" style="border-radius: 0 12px 12px 0;" min="2020" max="2030" required />
+                    </div>
+                    <span asp-validation-for="EnrollmentYear" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold text-secondary small mb-1" asp-for="Department">Select Department</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                        <i class="bi bi-building text-muted"></i>
+                    </span>
+                    <select asp-for="Department" class="form-select border-start-0 py-2" style="border-radius: 0 12px 12px 0;" required>
+                        <option value="">-- Choose Dept --</option>
+                        @if (ViewBag.Departments != null)
+                        {
+                            foreach (var dept in (List<string>)ViewBag.Departments)
+                            {
+                                <option value="@dept">@dept</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <span asp-validation-for="Department" class="text-danger small"></span>
+            </div>
+
+            <button type="submit" class="btn w-100 py-2 fw-bold text-white shadow-sm mb-3"
+                    style="background-color: var(--portal-emerald); border-radius: 12px;">
+                Save & Unlock Portal <i class="bi bi-check2-circle ms-1"></i>
+            </button>
+
+            <div class="text-center">
+                <a asp-controller="Home" asp-action="Logout" class="text-decoration-none text-muted small fw-bold">
+                    <i class="bi bi-box-arrow-left me-1"></i> Logout and exit
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

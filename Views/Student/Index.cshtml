@@ -1,0 +1,62 @@
+﻿@model Student
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Student Dashboard - ABC University";
+}
+
+<div class="container py-5">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="fw-bold" style="color: var(--portal-navy); letter-spacing: -1px;">
+                Welcome Back, <span style="color: var(--portal-emerald);">@Model.Name!</span>
+            </h1>
+            <p class="text-muted">Manage your academic journey and explore your dashboard.</p>
+            <div class="badge px-3 py-2 rounded-pill" style="background: rgba(16, 185, 129, 0.1); color: var(--portal-emerald);">
+                <i class="bi bi-mortarboard-fill me-1"></i> @Model.Department Student (@Model.EnrollmentYear)
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+        
+        <div class="col-md-4">
+            <div class="card card-hover h-100 shadow-sm p-4 text-center">
+                <div class="d-inline-block p-3 rounded-circle mx-auto mb-3" style="background: rgba(15, 23, 42, 0.05);">
+                    <i class="bi bi-person-badge text-primary" style="font-size: 2rem;"></i>
+                </div>
+                <h4 class="fw-bold" style="color: var(--portal-navy);">My Profile</h4>
+                <p class="text-muted small">Update your personal information and contact details.</p>
+                <a href="#" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
+                    View Profile
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-hover h-100 shadow-sm p-4 text-center">
+                <div class="d-inline-block p-3 rounded-circle mx-auto mb-3" style="background: rgba(15, 23, 42, 0.05);">
+                    <i class="bi bi-journal-text text-success" style="font-size: 2rem;"></i>
+                </div>
+                <h4 class="fw-bold" style="color: var(--portal-navy);">My Courses</h4>
+                <p class="text-muted small">Check your enrolled subjects and academic progress.</p>
+                <a href="#" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
+                    Check Courses
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-hover h-100 shadow-sm p-4 text-center">
+                <div class="d-inline-block p-3 rounded-circle mx-auto mb-3" style="background: rgba(15, 23, 42, 0.05);">
+                    <i class="bi bi-graph-up-arrow text-warning" style="font-size: 2rem;"></i>
+                </div>
+                <h4 class="fw-bold" style="color: var(--portal-navy);">Grades & GPA</h4>
+                <p class="text-muted small">View your semester results and overall performance.</p>
+                <a href="#" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
+                    View Results
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

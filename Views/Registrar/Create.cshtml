@@ -1,0 +1,70 @@
+﻿@model UniversityAcademicManagementSystem.Models.Course
+
+@{
+    ViewData["Title"] = "Add New Course - ABC University";
+}
+
+<div class="container-fluid d-flex align-items-center justify-content-center min-vh-100" style="background-color: var(--portal-slate);">
+    <div class="card shadow-sm border-0 p-4 p-md-5" style="max-width: 500px; width: 100%; border-radius: 24px; background: #fff;">
+        
+        <div class="text-center mb-4">
+            <div class="d-inline-block p-3 rounded-circle mb-3" style="background: rgba(16, 185, 129, 0.1);">
+                <i class="bi bi-journal-plus" style="font-size: 2.2rem; color: var(--portal-emerald);"></i>
+            </div>
+            <h2 class="fw-bold" style="color: var(--portal-navy); letter-spacing: -1px;">Add New Course</h2>
+            <p class="text-muted small">Enter course details for the academic catalog.</p>
+        </div>
+
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="All" class="text-danger small mb-3 fw-bold"></div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold text-secondary small mb-1" asp-for="CourseName">Course Title</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
+                        <i class="bi bi-book text-muted"></i>
+                    </span>
+                    <input asp-for="CourseName" class="form-control border-start-0 py-2" placeholder="e.g. Data Structures" style="border-radius: 0 12px 12px 0;" />
+                </div>
+                <span asp-validation-for="CourseName" class="text-danger small"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold text-secondary small mb-1" asp-for="Credits">Credits</label>
+                    <input asp-for="Credits" type="number" class="form-control bg-light py-2" style="border-radius: 12px;" placeholder="1-10" />
+                    <span asp-validation-for="Credits" class="text-danger small"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold text-secondary small mb-1" asp-for="SemesterOffered">Semester</label>
+                    <input asp-for="SemesterOffered" class="form-control bg-light py-2" style="border-radius: 12px;" placeholder="1-8" />
+                    <span asp-validation-for="SemesterOffered" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold text-secondary small mb-1" asp-for="Department">Department</label>
+                <select asp-for="Department" class="form-select bg-light py-2" style="border-radius: 12px;">
+                    <option value="">-- Select Department --</option>
+                    @if (ViewBag.Departments != null)
+                    {
+                        foreach (var dept in ViewBag.Departments)
+                        {
+                            <option value="@dept">@dept</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="Department" class="text-danger small"></span>
+            </div>
+
+            <button type="submit" class="btn w-100 py-2 fw-bold text-white shadow-sm mb-3"
+                    style="background-color: var(--portal-emerald); border-radius: 12px;">
+                Create Course <i class="bi bi-check2-circle ms-1"></i>
+            </button>
+
+            <a asp-action="Index" class="btn btn-light w-100 py-2 fw-bold border" style="border-radius: 12px;">
+                <i class="bi bi-arrow-left me-1"></i> Back to Dashboard
+            </a>
+        </form>
+    </div>
+</div>

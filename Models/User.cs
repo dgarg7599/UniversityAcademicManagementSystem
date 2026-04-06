@@ -16,7 +16,14 @@ namespace UniversityAcademicManagementSystem.Models
 
         [Required(ErrorMessage = "Password is required")]
         [MaxLength(300)]
-        public string PasswordHash { get; set; } = string.Empty;
+        [DataType(DataType.Password)]
+        public string Password { get; set; } = string.Empty;
+
+        [NotMapped]
+        [Required(ErrorMessage = "Confirm Password is required")]
+        [Compare("Password", ErrorMessage = "Passwords do not match!")]
+        [DataType(DataType.Password)]
+        public string? ConfirmPassword { get; set; }
 
         [Required(ErrorMessage ="Role is required")]
         public Role Role { get; set; } = Role.Student;

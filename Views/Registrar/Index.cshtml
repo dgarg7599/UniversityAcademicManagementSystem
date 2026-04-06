@@ -1,0 +1,160 @@
+﻿@using UniversityAcademicManagementSystem.Models;
+@model IEnumerable<Course>
+
+@{
+    ViewData["Title"] = "Registrar Dashboard - Course Management";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<div class="container mt-5 pb-5">
+    <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+            <h2 class="fw-bold" style="color: var(--portal-navy); letter-spacing: -1px;">Course Management</h2>
+            <p class="text-muted mb-0">Manage academic courses, credits, and departments.</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+            <a asp-action="Create" class="btn text-white px-4 py-2 fw-bold shadow-sm"
+                   style="background-color: var(--portal-emerald); border-radius: 12px;">
+                <i class="bi bi-journal-plus me-2"></i>Add New Course
+            </a>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm mb-4" style="border-radius: 15px; background: #f8fafc;">
+        <div class="card-body p-3">
+            <form method="get" asp-action="Index" class="row g-2 align-items-end">
+                <div class="col-md-4">
+                    <label class="small fw-bold text-secondary mb-1 ms-1">Filter by Department</label>
+                    <select name="dept" class="form-select border-0 shadow-sm" style="border-radius: 10px;">
+                        <option value="">All Departments</option>
+                        @foreach (var d in ViewBag.Departments)
+                        {
+                            @if (ViewBag.SelectedDept == d)
+                            {
+                                <option value="@d" selected>@d</option>
+                            }
+                            else
+                            {
+                                <option value="@d">@d</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="small fw-bold text-secondary mb-1 ms-1">Semester</label>
+                    <select name="sem" class="form-select border-0 shadow-sm" style="border-radius: 10px;">
+                        <option value="">All Semesters</option>
+                        @for (int i = 1; i <= 8; i++)
+                        {
+                            var s = i.ToString();
+                            @if (ViewBag.SelectedSem == s)
+                            {
+                                <option value="@s" selected>Semester @s</option>
+                            }
+                            else
+                            {
+                                <option value="@s">Semester @s</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-5 d-flex gap-2">
+                    <button type="submit" class="btn btn-dark fw-bold px-4 flex-grow-1" style="border-radius: 11px;">
+                        <i class="bi bi-filter me-2"></i>Apply Filter
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary fw-bold px-3" style="border-radius: 10px;" title="Reset">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success border-0 shadow-sm mb-4 d-flex align-items-center" style="border-radius: 12px;">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <div>@TempData["SuccessMessage"]</div>
+        </div>
+    }
+
+    <div class="card shadow-sm border-0" style="border-radius: 20px; overflow: hidden;">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0 align-middle">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="ps-4 py-3 text-secondary small fw-bold text-uppercase">Course Details</th>
+                        <th class="py-3 text-center text-secondary small fw-bold text-uppercase">Department</th>
+                        <th class="py-3 text-center text-secondary small fw-bold text-uppercase">Semester</th>
+                        <th class="py-3 text-center text-secondary small fw-bold text-uppercase">Credits</th>
+                        <th class="pe-4 py-3 text-center text-secondary small fw-bold text-uppercase">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="ps-4 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                                             style="width: 40px; height: 40px; background: rgba(16, 185, 129, 0.1); color: var(--portal-emerald); flex-shrink: 0;">
+                                            <i class="bi bi-book-half"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold mb-0" style="color: var(--portal-navy);">@item.CourseName</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">ID: #@item.CourseId</div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="py-3 text-center">
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold"
+                                          style="background-color: #f0fdf4; color: #166534; font-size: 0.75rem; border: 1px solid #dcfce7;">
+                                        @item.Department
+                                    </span>
+                                </td>
+
+                                <td class="py-3 text-center">
+                                    <div class="fw-bold" style="color: var(--portal-navy);">@item.SemesterOffered</div>
+                                </td>
+
+                                <td class="py-3 text-center">
+                                    <div class="badge bg-light text-dark border px-3 py-1" style="border-radius: 8px;">
+                                        @item.Credits Credits
+                                    </div>
+                                </td>
+
+                                <td class="pe-4 py-3">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a asp-action="Edit" asp-route-id="@item.CourseId" class="btn btn-sm btn-light border shadow-sm" style="border-radius: 8px;" title="Edit">
+                                            <i class="bi bi-pencil-square text-primary"></i>
+                                        </a>
+
+                                        <form asp-action="Delete" asp-route-id="@item.CourseId" method="post"
+                                              onsubmit="return confirm('Are you sure you want to delete this course?');" class="m-0">
+                                            <button type="submit" class="btn btn-sm btn-light border shadow-sm" style="border-radius: 8px;" title="Delete">
+                                                <i class="bi bi-trash3-fill text-danger"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center py-5 text-muted">
+                                <i class="bi bi-funnel fs-1 d-block mb-2"></i>
+                                No courses match your filters.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

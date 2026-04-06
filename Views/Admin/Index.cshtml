@@ -1,0 +1,109 @@
+﻿@model IEnumerable<UniversityAcademicManagementSystem.Models.User>
+
+@{
+    ViewData["Title"] = "Admin Dashboard - Staff Management";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<div class="container mt-5 pb-5">
+    <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+            <h2 class="fw-bold" style="color: var(--portal-navy); letter-spacing: -1px;">Staff Management</h2>
+            <p class="text-muted mb-0">Manage Faculty and Registrar accounts from here.</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+            <a asp-action="Create" class="btn text-white px-4 py-2 fw-bold shadow-sm"
+                   style="background-color: var(--portal-emerald); border-radius: 12px;">
+                <i class="bi bi-person-plus-fill me-2"></i>Add New Staff
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success border-0 shadow-sm mb-4 d-flex align-items-center" style="border-radius: 12px;">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <div>@TempData["SuccessMessage"]</div>
+        </div>
+    }
+
+    <div class="card shadow-sm border-0" style="border-radius: 20px; overflow: hidden;">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0 align-middle">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="ps-4 py-3 text-secondary small fw-bold text-uppercase">Staff Member</th>
+                        <th class="py-3 text-center text-secondary small fw-bold text-uppercase">Role</th>
+                        <th class="py-3 text-center text-secondary small fw-bold text-uppercase">Status</th>
+                        <th class="pe-4 py-3 text-center text-secondary small fw-bold text-uppercase">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="ps-4 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                                             style="width: 40px; height: 40px; background: rgba(16, 185, 129, 0.1); color: var(--portal-emerald); flex-shrink: 0;">
+                                            <i class="bi bi-person-badge"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold mb-0" style="color: var(--portal-navy);">@item.Email</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">ID: #@item.UserId</div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="py-3 text-center">
+                                    @if (item.Role.ToString() == "Faculty")
+                                    {
+                                        <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #e0f2fe; color: #0369a1; font-size: 0.75rem;">Faculty</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #fef3c7; color: #92400e; font-size: 0.75rem;">Registrar</span>
+                                    }
+                                </td>
+
+                                <td class="py-3 text-center">
+                                    <div class="d-flex align-items-center justify-content-center small fw-bold" style="color: var(--portal-emerald);">
+                                        <span class="p-1 rounded-circle me-2" style="background-color: var(--portal-emerald); width: 8px; height: 8px;"></span>
+                                        Active
+                                    </div>
+                                </td>
+
+                                <td class="pe-4 py-3">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a asp-action="Edit" asp-route-id="@item.UserId" class="btn btn-sm btn-light border shadow-sm" style="border-radius: 8px;" title="Edit">
+                                            <i class="bi bi-pencil-square text-primary"></i>
+                                        </a>
+
+                                        <form asp-action="Delete" asp-route-id="@item.UserId" method="post"
+                                              onsubmit="return confirm('Are you sure you want to delete this staff record?');" class="m-0">
+                                            <button type="submit" class="btn btn-sm btn-light border shadow-sm" style="border-radius: 8px;" title="Delete">
+                                                <i class="bi bi-trash3-fill text-danger"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center py-5 text-muted">
+                                <i class="bi bi-inbox fs-1 d-block mb-2"></i>
+                                No staff members found.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
