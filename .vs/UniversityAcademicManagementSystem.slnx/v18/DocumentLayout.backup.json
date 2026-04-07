@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{931801BF-574C-0D77-30A6-EEC1821B6D0A}|UniversityAcademicManagementSystem.csproj|c:\\users\\2475938\\onedrive - cognizant\\desktop\\universityacademicmanagementsystem\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{931801BF-574C-0D77-30A6-EEC1821B6D0A}|UniversityAcademicManagementSystem.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{931801BF-574C-0D77-30A6-EEC1821B6D0A}|UniversityAcademicManagementSystem.csproj|c:\\users\\2475938\\onedrive - cognizant\\desktop\\universityacademicmanagementsystem\\migrations\\20260407125246_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931801BF-574C-0D77-30A6-EEC1821B6D0A}|UniversityAcademicManagementSystem.csproj|solutionrelative:migrations\\20260407125246_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{931801BF-574C-0D77-30A6-EEC1821B6D0A}|UniversityAcademicManagementSystem.csproj|c:\\users\\2475938\\onedrive - cognizant\\desktop\\universityacademicmanagementsystem\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{931801BF-574C-0D77-30A6-EEC1821B6D0A}|UniversityAcademicManagementSystem.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -167,19 +175,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T12:52:54.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260407125246_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Migrations\\20260407125246_InitialMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260407125246_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Migrations\\20260407125246_InitialMigration.cs",
+              "RelativeToolTip": "Migrations\\20260407125246_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T12:52:48.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
               "ToolTip": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Home\\Privacy.cshtml",
               "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-07T12:46:29.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
@@ -187,12 +221,11 @@
               "RelativeToolTip": "Controllers\\StudentController.cs",
               "ViewState": "AgIAALQAAAAAAAAAAAAmwMEAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:14:30.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:14:30.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "AcademicRecord.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Models\\AcademicRecord.cs",
               "RelativeDocumentMoniker": "Models\\AcademicRecord.cs",
@@ -200,12 +233,11 @@
               "RelativeToolTip": "Models\\AcademicRecord.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAmwBIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:03:50.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:03:50.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Student\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\Index.cshtml",
@@ -213,12 +245,11 @@
               "RelativeToolTip": "Views\\Student\\Index.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T09:30:05.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T09:30:05.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Academics.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Student\\Academics.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\Academics.cshtml",
@@ -226,12 +257,11 @@
               "RelativeToolTip": "Views\\Student\\Academics.cshtml",
               "ViewState": "AgIAAEcAAAAAAAAAAAAmwFUAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-07T12:08:11.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T12:08:11.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -239,12 +269,11 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwCkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:21:32.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T09:21:32.459Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "IStudentService.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Services\\Interfaces\\IStudentService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IStudentService.cs",
@@ -252,12 +281,11 @@
               "RelativeToolTip": "Services\\Interfaces\\IStudentService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:13:00.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T09:13:00.996Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Services\\Implementations\\StudentService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\StudentService.cs",
@@ -265,12 +293,11 @@
               "RelativeToolTip": "Services\\Implementations\\StudentService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:12:52.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:12:52.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "RegistrarService.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Services\\Implementations\\RegistrarService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\RegistrarService.cs",
@@ -278,12 +305,11 @@
               "RelativeToolTip": "Services\\Implementations\\RegistrarService.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:11:24.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:11:24.815Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
@@ -291,12 +317,11 @@
               "RelativeToolTip": "Controllers\\AdminController.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwBQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T09:24:20.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T09:24:20.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -304,12 +329,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T04:46:31.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T04:46:31.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -317,12 +341,11 @@
               "RelativeToolTip": "wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-04-07T11:09:40.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T11:09:40.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AddGrade.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Faculty\\AddGrade.cshtml",
               "RelativeDocumentMoniker": "Views\\Faculty\\AddGrade.cshtml",
@@ -330,12 +353,11 @@
               "RelativeToolTip": "Views\\Faculty\\AddGrade.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAGwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-07T06:22:18.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:22:18.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -343,12 +365,11 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-04-07T06:59:34.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:59:34.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Faculty\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Faculty\\Edit.cshtml",
@@ -356,12 +377,11 @@
               "RelativeToolTip": "Views\\Faculty\\Edit.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-07T08:50:30.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T08:50:30.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "IFacultyService.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Services\\Interfaces\\IFacultyService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IFacultyService.cs",
@@ -369,12 +389,11 @@
               "RelativeToolTip": "Services\\Interfaces\\IFacultyService.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAiwAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T04:04:14.907Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T04:04:14.907Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "FacultyService.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Services\\Implementations\\FacultyService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\FacultyService.cs",
@@ -382,12 +401,11 @@
               "RelativeToolTip": "Services\\Implementations\\FacultyService.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAswAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T04:04:28.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T04:04:28.498Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
@@ -395,12 +413,11 @@
               "RelativeToolTip": "Views\\Admin\\Index.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-07T07:04:20.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T07:04:20.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Registrar\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Registrar\\Index.cshtml",
@@ -408,12 +425,11 @@
               "RelativeToolTip": "Views\\Registrar\\Index.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-07T06:10:52.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:10:52.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "FacultyController.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Controllers\\FacultyController.cs",
               "RelativeDocumentMoniker": "Controllers\\FacultyController.cs",
@@ -421,12 +437,11 @@
               "RelativeToolTip": "Controllers\\FacultyController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAYwEIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T04:04:57.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T04:04:57.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Faculty\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Faculty\\Index.cshtml",
@@ -434,12 +449,11 @@
               "RelativeToolTip": "Views\\Faculty\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-07T06:21:48.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:21:48.913Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -447,12 +461,11 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-07T08:35:18.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T08:35:18.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Grade.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Models\\Grade.cs",
               "RelativeDocumentMoniker": "Models\\Grade.cs",
@@ -460,12 +473,11 @@
               "RelativeToolTip": "Models\\Grade.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAA8wBIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:03:43.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:03:43.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "RegistrarController.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Controllers\\RegistrarController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegistrarController.cs",
@@ -473,12 +485,11 @@
               "RelativeToolTip": "Controllers\\RegistrarController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:10:31.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:10:31.538Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "AdminService.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Services\\Implementations\\AdminService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\AdminService.cs",
@@ -486,12 +497,11 @@
               "RelativeToolTip": "Services\\Implementations\\AdminService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:05:13.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T06:05:13.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Models\\Course.cs",
               "RelativeDocumentMoniker": "Models\\Course.cs",
@@ -499,12 +509,11 @@
               "RelativeToolTip": "Models\\Course.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T04:42:24.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T04:42:24.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "CompleteProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Student\\CompleteProfile.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\CompleteProfile.cshtml",
@@ -512,12 +521,11 @@
               "RelativeToolTip": "Views\\Student\\CompleteProfile.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAAgAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T10:57:56.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T10:57:56.33Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "EditProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Student\\EditProfile.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\EditProfile.cshtml",
@@ -525,12 +533,11 @@
               "RelativeToolTip": "Views\\Student\\EditProfile.cshtml",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T09:29:25.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T09:29:25.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "AvailableCourses.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Student\\AvailableCourses.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\AvailableCourses.cshtml",
@@ -538,12 +545,11 @@
               "RelativeToolTip": "Views\\Student\\AvailableCourses.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T11:08:48.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T11:08:48.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Models\\Student.cs",
               "RelativeDocumentMoniker": "Models\\Student.cs",
@@ -551,12 +557,11 @@
               "RelativeToolTip": "Models\\Student.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T08:56:40.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T08:56:40.622Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
@@ -564,12 +569,11 @@
               "RelativeToolTip": "Views\\Shared\\Error.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T11:33:49.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T11:33:49.3Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "EnrolledCourses.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Student\\EnrolledCourses.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\EnrolledCourses.cshtml",
@@ -577,12 +581,11 @@
               "RelativeToolTip": "Views\\Student\\EnrolledCourses.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T11:11:41.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T11:11:41.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Admin\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Create.cshtml",
@@ -590,12 +593,11 @@
               "RelativeToolTip": "Views\\Admin\\Create.cshtml",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T11:27:35.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T11:27:35.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Services\\Implementations\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
@@ -603,12 +605,11 @@
               "RelativeToolTip": "Services\\Implementations\\UserService.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T10:20:45.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T10:20:45.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Home\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Register.cshtml",
@@ -616,12 +617,11 @@
               "RelativeToolTip": "Views\\Home\\Register.cshtml",
               "ViewState": "AgIAADkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T10:15:53.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T10:15:53.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Views\\Student\\Profile.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\Profile.cshtml",
@@ -629,12 +629,11 @@
               "RelativeToolTip": "Views\\Student\\Profile.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-06T09:28:41.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T09:28:41.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -642,12 +641,11 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T10:14:03.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T10:14:03.246Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "Enrollment.cs",
               "DocumentMoniker": "C:\\Users\\2475938\\OneDrive - Cognizant\\Desktop\\UniversityAcademicManagementSystem\\Models\\Enrollment.cs",
               "RelativeDocumentMoniker": "Models\\Enrollment.cs",
@@ -655,8 +653,7 @@
               "RelativeToolTip": "Models\\Enrollment.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:09:06.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T09:09:06.134Z"
             }
           ]
         }
