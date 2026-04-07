@@ -37,6 +37,11 @@ namespace UniversityAcademicManagementSystem.Controllers
             return View();
         }
 
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
         public IActionResult Register()
         {
             return View();
@@ -132,6 +137,8 @@ namespace UniversityAcademicManagementSystem.Controllers
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
+            TempData.Clear();
+
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
             return RedirectToAction("Index", "Home");

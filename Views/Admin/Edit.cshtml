@@ -7,11 +7,9 @@
 
 <div class="container-fluid d-flex align-items-center justify-content-center min-vh-100" style="background-color: var(--portal-slate);">
     
-    @* Card without hover effect - Clean & Solid *@
     <div class="card shadow-sm border-0 p-4 p-md-5" style="max-width: 500px; width: 100%; border-radius: 24px; background: #fff;">
         
         <div class="text-center mb-4">
-            @* Icon matching your Create page style *@
             <div class="d-inline-block p-3 rounded-circle mb-3" style="background: rgba(16, 185, 129, 0.1);">
                 <i class="bi bi-pencil-square" style="font-size: 2.2rem; color: var(--portal-emerald);"></i>
             </div>
@@ -20,9 +18,6 @@
         </div>
 
         <form asp-action="Edit" method="post">
-            @Html.AntiForgeryToken()
-            
-            @* Hidden ID is mandatory for Edit *@
             <input type="hidden" asp-for="UserId" />
 
             <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>

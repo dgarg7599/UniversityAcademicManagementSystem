@@ -1,0 +1,117 @@
+﻿@model IEnumerable<UniversityAcademicManagementSystem.Models.Grade>
+
+@{
+    ViewData["Title"] = "Academic Transcript - ABC University";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            
+            @* --- TOP HEADER SECTION --- *@
+            <div class="card border-0 shadow-sm mb-4 rounded-4 overflow-hidden">
+                <div class="card-body p-4 text-white" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h3 class="fw-bold mb-1"><i class="bi bi-mortarboard me-2"></i>Academic Transcript</h3>
+                            <p class="mb-0 opacity-75 small text-uppercase ls-1">ABC University - Student Official Record</p>
+                        </div>
+                        <div class="col-md-5 text-md-end mt-3 mt-md-0">
+                            <div class="d-inline-block text-center px-4 py-2 bg-white bg-opacity-25 rounded-3">
+                                <h2 class="fw-bold mb-0">@ViewBag.CGPA</h2>
+                                <small class="fw-bold text-uppercase" style="font-size: 0.7rem;">Cumulative GPA</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* --- STATS & GRADING INFO --- *@
+            <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-3">
+                        <div class="card-body p-3 d-flex align-items-center">
+                            <div class="bg-light rounded-circle p-3 me-3">
+                                <i class="bi bi-book text-success h4 mb-0"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted fw-bold d-block text-uppercase" style="font-size: 0.7rem;">Courses Completed</small>
+                                <span class="h4 fw-bold mb-0">@ViewBag.TotalCourses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card border-0 shadow-sm h-100 rounded-3 bg-light">
+                        <div class="card-body p-3">
+                            <small class="text-muted fw-bold d-block mb-2 text-uppercase" style="font-size: 0.7rem;">Grading Scale & Points</small>
+                            <div class="d-flex justify-content-between text-dark">
+                                <span class="small"><b>A:</b> 10</span>
+                                <span class="small"><b>B:</b> 8</span>
+                                <span class="small"><b>C:</b> 6</span>
+                                <span class="small"><b>D:</b> 4</span>
+                                <span class="small"><b>E:</b> 2</span>
+                                <span class="small text-danger"><b>F:</b> Fail (0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* --- TRANSCRIPT TABLE --- *@
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="bg-light">
+                            <tr class="small text-uppercase fw-bold text-secondary">
+                                <th class="ps-4 py-3 border-0">Course Name & Code</th>
+                                <th class="text-center py-3 border-0">Grade</th>
+                                <th class="text-center py-3 border-0">Points</th>
+                                <th class="ps-3 py-3 border-0">Faculty Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-top-0">
+                            @if (!Model.Any())
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center py-5 text-muted">
+                                        <i class="bi bi-exclamation-circle d-block h2"></i>
+                                        No academic records available yet.
+                                    </td>
+                                </tr>
+                            }
+                            @foreach (var item in Model)
+                            {
+                                // Inline Point calculation for display
+                                var points = item.GradeValue.ToUpper() switch { "A" => 10, "B" => 8, "C" => 6, "D" => 4, "E" => 2, _ => 0 };
+                                
+                                <tr>
+                                    <td class="ps-4 py-3">
+                                        <div class="fw-bold text-dark">@item.Course?.CourseName</div>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge rounded-pill px-3 py-2 @(item.GradeValue == "F" ? "bg-danger" : "bg-success")" 
+                                              style="min-width: 45px; font-weight: 600;">@item.GradeValue</span>
+                                    </td>
+                                    <td class="text-center fw-bold text-secondary">@points</td>
+                                    <td class="ps-3">
+                                        <span class="small @(string.IsNullOrEmpty(item.Remarks) ? "text-muted italic" : "text-dark")">
+                                            @(string.IsNullOrEmpty(item.Remarks) ? "N/A" : item.Remarks)
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="text-muted small">
+                    <i class="bi bi-shield-check me-1"></i> This is a digitally verified transcript. Generated on @DateTime.Now.ToString("dd MMM yyyy")
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

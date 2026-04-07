@@ -14,12 +14,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = "/Home/Login";
         options.AccessDeniedPath = "/Home/AccessDenied";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+        //options.SlidingExpiration = false;
     });
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IRegistrarService, RegistrarService>();
+builder.Services.AddScoped<IFacultyService, FacultyService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

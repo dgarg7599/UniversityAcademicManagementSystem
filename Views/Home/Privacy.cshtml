@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy - ABC University";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            @* Header Section *@
+            <div class="text-center mb-5">
+                <h1 class="fw-bold text-dark display-5">Privacy Policy</h1>
+
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+                
+                <section class="mb-5">
+                    <h4 class="fw-bold text-success mb-3"><i class="bi bi-info-circle me-2"></i>1. Introduction</h4>
+                    <p class="text-secondary leading-relaxed">
+                        At <strong>ABC University</strong>, we value the privacy of our students, faculty, and staff. This Privacy Policy explains how we collect, use, and protect your personal and academic information when you use our Management System.
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <h4 class="fw-bold text-success mb-3"><i class="bi bi-database-fill-check me-2"></i>2. Information We Collect</h4>
+                    <p class="text-secondary">We collect information to provide better services to all our users:</p>
+                    <ul class="text-secondary">
+                        <li class="mb-2"><strong>Personal Identification:</strong> Name, Email address, Student/User ID, and Contact details.</li>
+                        <li class="mb-2"><strong>Academic Records:</strong> Course enrollments, Grades and Performance analytics.</li>
+                        <li class="mb-2"><strong>Usage Data:</strong> Login timestamps, IP addresses, and browser types for security auditing.</li>
+                    </ul>
+                </section>
+
+                <section class="mb-5">
+                    <h4 class="fw-bold text-success mb-3"><i class="bi bi-shield-lock-fill me-2"></i>3. How We Use Your Data</h4>
+                    <div class="p-3 rounded-3 mb-3" style="background-color: #f8fafc; border-left: 4px solid #10b981;">
+                        <ul class="mb-0 text-secondary">
+                            <li>To facilitate academic grading and transcript generation.</li>
+                            <li>To manage course registrations and faculty assignments.</li>
+                            <li>To ensure the security of the university portal.</li>
+                            <li>To communicate important academic announcements.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h4 class="fw-bold text-success mb-3"><i class="bi bi-eye-slash-fill me-2"></i>4. Data Security</h4>
+                    <p class="text-secondary">
+                        We implement industry-standard encryption and security measures to protect your data from unauthorized access. Your academic records (Grades) are only accessible to authorized Faculty members and yourself. We <strong>never</strong> sell your personal data to third parties.
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <h4 class="fw-bold text-success mb-3"><i class="bi bi-cookie me-2"></i>5. Cookies & Authentication</h4>
+                    <p class="text-secondary">
+                        Our system uses secure cookies to maintain your login session. These cookies are essential for the portal to function and are automatically cleared when you log out or close your browser session.
+                    </p>
+                </section>
+
+                <hr class="my-5 opacity-25">
+
+                <div class="bg-light p-4 rounded-4 text-center">
+                    <h5 class="fw-bold text-dark mb-2">Have questions about your data?</h5>
+                    <p class="text-muted mb-3 small">Please contact the University IT Helpdesk or the Registrar's Office.</p>
+                    <a href="mailto:it-support@abc-university.edu" class="btn btn-success px-4 rounded-pill fw-bold" style="background-color: #10b981; border: none;">
+                        <i class="bi bi-envelope-at me-2"></i>Contact IT Support
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-muted small">
+                    <i class="bi bi-arrow-left me-1"></i> Return to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

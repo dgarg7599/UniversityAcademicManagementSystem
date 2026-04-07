@@ -26,7 +26,7 @@
                 </div>
                 <h4 class="fw-bold" style="color: var(--portal-navy);">My Profile</h4>
                 <p class="text-muted small">Update your personal information and contact details.</p>
-                <a href="#" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
+                <a asp-controller="Student" asp-action="Profile" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
                     View Profile
                 </a>
             </div>
@@ -39,7 +39,7 @@
                 </div>
                 <h4 class="fw-bold" style="color: var(--portal-navy);">My Courses</h4>
                 <p class="text-muted small">Check your enrolled subjects and academic progress.</p>
-                <a href="#" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
+                <a asp-controller="Student" asp-action="AvailableCourses" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
                     Check Courses
                 </a>
             </div>
@@ -52,7 +52,7 @@
                 </div>
                 <h4 class="fw-bold" style="color: var(--portal-navy);">Grades & GPA</h4>
                 <p class="text-muted small">View your semester results and overall performance.</p>
-                <a href="#" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
+                <a asp-controller="Student" asp-action="Academics" class="btn mt-auto fw-bold text-white" style="background-color: var(--portal-emerald); border-radius: 10px;">
                     View Results
                 </a>
             </div>
