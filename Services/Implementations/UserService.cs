@@ -25,7 +25,6 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
             }
             catch
             {
-                // Database connection error ya koi query issue hone par null return karega
                 return null;
             }
         }
