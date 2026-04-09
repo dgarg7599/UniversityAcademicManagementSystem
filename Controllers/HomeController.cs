@@ -93,6 +93,11 @@ namespace UniversityAcademicManagementSystem.Controllers
                     new Claim("UserId", user.UserId.ToString())
                 };
 
+                if (user.Role == Role.Faculty || user.Role == Role.Registrar)
+                {
+                    claims.Add(new Claim("Department", user.Department ?? ""));
+                }
+
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,

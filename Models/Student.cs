@@ -18,6 +18,7 @@ namespace UniversityAcademicManagementSystem.Models
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100)]
+        [RegularExpression("^[a-zA-Z ]+$", ErrorMessage = "Invalid format")]
         public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Email address is required")]
@@ -30,8 +31,8 @@ namespace UniversityAcademicManagementSystem.Models
         public string Department { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Contact number is required")]
-        [StringLength(20)]
-        [Phone(ErrorMessage = "Invalid phone number")]
+        [StringLength(10)]
+        [RegularExpression(@"^\d{10}$", ErrorMessage = "Please enter a 10-digit phone number without spaces or dashes.")]
         public string ContactNumber { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Enrollment year is required")]

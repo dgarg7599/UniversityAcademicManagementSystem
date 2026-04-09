@@ -54,6 +54,10 @@
                                         <div>
                                             <div class="fw-bold mb-0" style="color: var(--portal-navy);">@item.Email</div>
                                             <div class="text-muted" style="font-size: 0.75rem;">ID: #@item.UserId</div>
+                                            @if (item.Role.ToString() == "Faculty")
+                                            {
+                                                <div class="text-muted" style="font-size: 0.75rem;">Department: @item.Department</div>
+                                            }
                                         </div>
                                     </div>
                                 </td>

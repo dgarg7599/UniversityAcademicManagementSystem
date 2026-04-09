@@ -163,7 +163,7 @@ namespace UniversityAcademicManagementSystem.Controllers
             {
                 student.Name = model.Name;
                 student.ContactNumber = model.ContactNumber;
-                student.Department = model.Department;
+                student.Department = student.Department;
                 student.EnrollmentYear = model.EnrollmentYear;
 
                 var result = await _studentService.UpdateStudentProfileAsync(student);

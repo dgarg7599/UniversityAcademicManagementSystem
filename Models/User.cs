@@ -27,5 +27,8 @@ namespace UniversityAcademicManagementSystem.Models
 
         [Required(ErrorMessage ="Role is required")]
         public Role Role { get; set; } = Role.Student;
+
+        [MaxLength(100)]
+        public string? Department { get; set; } = string.Empty;
     }
 }

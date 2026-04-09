@@ -7,7 +7,6 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
 {
     public class UserService : IUserService
     {
-
         private readonly UniversityDbContext context;
 
         public UserService(UniversityDbContext context)
@@ -15,50 +14,67 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
             this.context = context;
         }
 
-
         public async Task<User?> LoginUserAsync(string email, string password)
         {
-            var user = await context.Users
-                .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+            try
+            {
+                var user = await context.Users
+                    .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
 
-            return user;
+                return user;
+            }
+            catch
+            {
+                // Database connection error ya koi query issue hone par null return karega
+                return null;
+            }
         }
 
         public async Task<bool> RegisterUserAsync(User model)
         {
-            var exists = await context.Users.AnyAsync(u => u.Email == model.Email);
-            if (exists) return false;
-
-
-            var newUser = new User
+            try
             {
-                Email = model.Email,
-                Password = model.Password,
-                Role = Role.Student
-            };
+                var exists = await context.Users.AnyAsync(u => u.Email == model.Email);
+                if (exists) return false;
 
+                var newUser = new User
+                {
+                    Email = model.Email,
+                    Password = model.Password,
+                    Role = Role.Student
+                };
 
+                context.Users.Add(newUser);
+                await context.SaveChangesAsync();
 
-            context.Users.Add(newUser);
-            await context.SaveChangesAsync();
+                var newStudent = new Student
+                {
+                    UserId = newUser.UserId,
+                    Email = model.Email
+                };
 
-            var newStudent = new Student
+                context.Students.Add(newStudent);
+                await context.SaveChangesAsync();
+
+                return true;
+            }
+            catch
             {
-                UserId = newUser.UserId,
-                Email = model.Email
-            };
-
-            context.Students.Add(newStudent);
-            await context.SaveChangesAsync();
-
-            return true;
+                return false;
+            }
         }
 
-
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<User?> GetUserByIdAsync(int id)
         {
-            var user = await context.Users.FindAsync(id);
-            return user;
+            try
+            {
+                var user = await context.Users.FindAsync(id);
+                return user;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

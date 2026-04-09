@@ -12,20 +12,47 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
 
         public async Task<Student?> GetStudentByEmailAsync(string email)
         {
-            return await _context.Students.FirstOrDefaultAsync(s => s.Email == email);
+            try
+            {
+                return await _context.Students.FirstOrDefaultAsync(s => s.Email == email);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public async Task<bool> IsProfileCompleteAsync(string email)
         {
-            var s = await _context.Students.FirstOrDefaultAsync(s => s.Email == email);
-            if (s == null) return false;
-            return !string.IsNullOrEmpty(s.Department) && !string.IsNullOrEmpty(s.ContactNumber);
+            try
+            {
+                var s = await _context.Students.FirstOrDefaultAsync(s => s.Email == email);
+                if (s == null) return false;
+                return !string.IsNullOrEmpty(s.Department) && !string.IsNullOrEmpty(s.ContactNumber);
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public async Task<bool> UpdateStudentProfileAsync(Student student)
         {
-            _context.Students.Update(student);
-            return await _context.SaveChangesAsync() > 0;
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == student.Email);
+                if (user != null)
+                {
+                    user.Department = student.Department;
+                    _context.Users.Update(user);
+                }
+                _context.Students.Update(student);
+                return await _context.SaveChangesAsync() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public async Task<bool> EnrollInCourseAsync(int studentId, int courseId)
@@ -59,7 +86,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception)
+            catch
             {
                 return false;
             }
@@ -80,7 +107,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
 
                 return true;
             }
-            catch (Exception)
+            catch
             {
                 return false;
             }
@@ -88,13 +115,21 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
 
         public async Task<IEnumerable<Course>> GetAvailableCoursesAsync(string dept, int studentId)
         {
-            var activeEnrolledIds = await _context.Enrollments
-                .Where(e => e.StudentId == studentId && e.EnrollmentStatus == EnrollmentStatus.ENROLLED)
-                .Select(e => e.CourseId)
-                .ToListAsync();
-            return await _context.Courses
-                .Where(c => c.Department == dept && !activeEnrolledIds.Contains(c.CourseId))
-                .ToListAsync();
+            try
+            {
+                var activeEnrolledIds = await _context.Enrollments
+                    .Where(e => e.StudentId == studentId && e.EnrollmentStatus == EnrollmentStatus.ENROLLED)
+                    .Select(e => e.CourseId)
+                    .ToListAsync();
+
+                return await _context.Courses
+                    .Where(c => c.Department == dept && !activeEnrolledIds.Contains(c.CourseId))
+                    .ToListAsync();
+            }
+            catch
+            {
+                return Enumerable.Empty<Course>();
+            }
         }
 
         public async Task<IEnumerable<Enrollment>> GetStudentEnrollmentsAsync(int studentId)
@@ -107,7 +142,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
                                 e.EnrollmentStatus == EnrollmentStatus.ENROLLED)
                     .ToListAsync();
             }
-            catch (Exception)
+            catch
             {
                 return new List<Enrollment>();
             }
@@ -115,39 +150,53 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
 
         public async Task<IEnumerable<Grade>> GetStudentGradesAsync(int studentId)
         {
-            return await _context.Grades
-                .Include(g => g.Course)
-                .Where(g => g.StudentId == studentId)
-                .OrderByDescending(g => g.GradeId)
-                .ToListAsync();
+            try
+            {
+                return await _context.Grades
+                    .Include(g => g.Course)
+                    .Where(g => g.StudentId == studentId)
+                    .OrderByDescending(g => g.GradeId)
+                    .ToListAsync();
+            }
+            catch
+            {
+                return Enumerable.Empty<Grade>();
+            }
         }
 
         public async Task<(double CGPA, int TotalCourses)> CalculateCGPAAsync(int studentId)
         {
-            var grades = await _context.Grades
-                .Where(g => g.StudentId == studentId)
-                .ToListAsync();
-
-            int totalCourses = grades.Count;
-            if (totalCourses == 0) return (0, 0);
-
-            double totalPoints = 0;
-
-            foreach (var g in grades)
+            try
             {
-                totalPoints += g.GradeValue.ToUpper() switch
-                {
-                    "A" => 10,
-                    "B" => 8,
-                    "C" => 6,
-                    "D" => 4,
-                    "E" => 2,
-                    _ => 0
-                };
-            }
+                var grades = await _context.Grades
+                    .Where(g => g.StudentId == studentId)
+                    .ToListAsync();
 
-            double cgpa = Math.Round(totalPoints / totalCourses, 2);
-            return (cgpa, totalCourses);
+                int totalCourses = grades.Count;
+                if (totalCourses == 0) return (0, 0);
+
+                double totalPoints = 0;
+
+                foreach (var g in grades)
+                {
+                    totalPoints += g.GradeValue.ToUpper() switch
+                    {
+                        "A" => 10,
+                        "B" => 8,
+                        "C" => 6,
+                        "D" => 4,
+                        "E" => 2,
+                        _ => 0
+                    };
+                }
+
+                double cgpa = Math.Round(totalPoints / totalCourses, 2);
+                return (cgpa, totalCourses);
+            }
+            catch
+            {
+                return (0, 0);
+            }
         }
     }
 }

@@ -32,12 +32,17 @@
 
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label class="form-label fw-bold text-secondary small mb-1" asp-for="ContactNumber">Contact Number</label>
+                    <label class="form-label fw-bold text-secondary small mb-1 required-label" asp-for="ContactNumber">Contact Number</label>
                     <div class="input-group">
                         <span class="input-group-text bg-light border-end-0" style="border-radius: 12px 0 0 12px;">
                             <i class="bi bi-telephone text-muted"></i>
                         </span>
-                        <input asp-for="ContactNumber" class="form-control border-start-0 py-2" placeholder="9876543210" style="border-radius: 0 12px 12px 0;" required />
+                        <input asp-for="ContactNumber"
+                               type="tel"
+                               class="form-control border-start-0 py-2"
+                               placeholder="9876543210"
+                               style="border-radius: 0 12px 12px 0;"
+                               required />
                     </div>
                     <span asp-validation-for="ContactNumber" class="text-danger small"></span>
                 </div>

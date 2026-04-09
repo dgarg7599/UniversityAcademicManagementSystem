@@ -14,26 +14,45 @@ namespace UniversityAcademicManagementSystem.Controllers
 
         public FacultyController(IFacultyService facultyService) => _facultyService = facultyService;
 
-        public async Task<IActionResult> Index() => View(await _facultyService.GetAllGradesAsync());
+        public async Task<IActionResult> Index()
+        {
+            var facultyDept = GetFacultyDepartment();
+            return View(await _facultyService.GetGradesByDepartmentAsync(facultyDept));
+        }
 
         [HttpGet]
         public IActionResult AddGrade()
         {
-            ViewBag.Departments = Departments;
+            var facultyDept = GetFacultyDepartment();
+            ViewBag.Departments = new List<string> { facultyDept! }; // ✅ Only own dept
             return View(new Grade());
         }
 
         [HttpPost]
         public async Task<IActionResult> AddGrade(Grade model, string dept, string actionType)
         {
-            ViewBag.Departments = Departments;
+            var facultyDept = GetFacultyDepartment();
+
+            // 🚫 Department mismatch (UI + security)
+            if (!string.IsNullOrEmpty(dept) && dept != facultyDept)
+            {
+                ModelState.AddModelError("", "You don't belong to this department.");
+                ViewBag.Departments = new List<string> { facultyDept! };
+                return View(model);
+            }
+
+            ViewBag.Departments = new List<string> { facultyDept! };
             ViewBag.SelectedDept = dept;
             ViewBag.SelectedCourse = model.CourseId;
 
             if (actionType == "Refresh")
             {
-                if (!string.IsNullOrEmpty(dept)) ViewBag.Courses = await _facultyService.GetCoursesByDepartmentAsync(dept);
-                if (model.CourseId > 0) ViewBag.Students = await _facultyService.GetEnrolledStudentsByCourseAsync(model.CourseId);
+                if (!string.IsNullOrEmpty(dept))
+                    ViewBag.Courses = await _facultyService.GetCoursesByDepartmentAsync(dept);
+
+                if (model.CourseId > 0)
+                    ViewBag.Students = await _facultyService.GetEnrolledStudentsByCourseAsync(model.CourseId);
+
                 ModelState.Clear();
                 return View(model);
             }
@@ -41,20 +60,26 @@ namespace UniversityAcademicManagementSystem.Controllers
             // DUPLICATE CHECK
             if (await _facultyService.IsGradeAlreadyExists(model.StudentId, model.CourseId))
             {
-                ModelState.AddModelError("", "Grade already exists for this student in this course. Please Edit from Dashboard.");
+                ModelState.AddModelError("", "Grade already exists for this student in this course.");
             }
 
             if (ModelState.IsValid)
             {
-                if (await _facultyService.AddGradeAsync(model))
+                if (await _facultyService.AddGradeAsync(model, facultyDept))
                 {
                     TempData["Success"] = "Grade Saved Successfully!";
                     return RedirectToAction(nameof(Index));
                 }
+
+                ModelState.AddModelError("", "Unauthorized department access.");
             }
 
-            if (!string.IsNullOrEmpty(dept)) ViewBag.Courses = await _facultyService.GetCoursesByDepartmentAsync(dept);
-            if (model.CourseId > 0) ViewBag.Students = await _facultyService.GetEnrolledStudentsByCourseAsync(model.CourseId);
+            if (!string.IsNullOrEmpty(dept))
+                ViewBag.Courses = await _facultyService.GetCoursesByDepartmentAsync(dept);
+
+            if (model.CourseId > 0)
+                ViewBag.Students = await _facultyService.GetEnrolledStudentsByCourseAsync(model.CourseId);
+
             return View(model);
         }
 
@@ -80,6 +105,11 @@ namespace UniversityAcademicManagementSystem.Controllers
             if (await _facultyService.DeleteGradeAsync(id)) TempData["Success"] = "Grade Deleted!";
             else TempData["Error"] = "Delete Failed!";
             return RedirectToAction(nameof(Index));
+        }
+
+        private string? GetFacultyDepartment()
+        {
+            return User.Claims.FirstOrDefault(c => c.Type == "Department")?.Value;
         }
     }
 }

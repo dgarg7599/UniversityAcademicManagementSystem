@@ -60,6 +60,21 @@
                 <span asp-validation-for="Role" class="text-danger small"></span>
             </div>
 
+            <div class="mb-4 d-none" id="departmentDiv">
+                <label class="form-label fw-600 text-secondary small mb-1">
+                    Department
+                </label>
+
+                <select asp-for="Department" class="form-select py-2">
+                    <option value="">-- Select Department --</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </select>
+            </div>
+
             <button type="submit" class="btn w-100 py-2 fw-bold text-white shadow-sm mb-3"
                     style="background-color: var(--portal-emerald); border-radius: 12px;">
                 Create Account <i class="bi bi-check2-circle ms-1"></i>
@@ -76,4 +91,16 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        const roleSelect = document.getElementById("Role");
+        const departmentDiv = document.getElementById("departmentDiv");
+
+        roleSelect.addEventListener("change", function() {
+            if (this.value === "Faculty") {
+                departmentDiv.classList.remove("d-none");
+            } else {
+                departmentDiv.classList.add("d-none");
+            }
+        });
+    </script>
 }

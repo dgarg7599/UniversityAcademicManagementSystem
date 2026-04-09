@@ -10,25 +10,73 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
         private readonly UniversityDbContext _context;
         public FacultyService(UniversityDbContext context) => _context = context;
 
-        public async Task<IEnumerable<Grade>> GetAllGradesAsync() =>
-            await _context.Grades.Include(g => g.Student).Include(g => g.Course).OrderByDescending(g => g.GradeId).ToListAsync();
-
-        public async Task<IEnumerable<Course>> GetCoursesByDepartmentAsync(string dept) =>
-            await _context.Courses.Where(c => c.Department == dept).ToListAsync();
-
-        public async Task<IEnumerable<object>> GetEnrolledStudentsByCourseAsync(int courseId) =>
-            await _context.Enrollments.Where(e => e.CourseId == courseId && e.EnrollmentStatus == EnrollmentStatus.ENROLLED)
-                .Select(e => new { StudentId = e.Student.StudentId, Name = e.Student.Name }).ToListAsync();
-
-        public async Task<bool> IsGradeAlreadyExists(int studentId, int courseId) =>
-            await _context.Grades.AnyAsync(g => g.StudentId == studentId && g.CourseId == courseId);
-
-        public async Task<bool> AddGradeAsync(Grade model)
+        public async Task<IEnumerable<Grade>> GetAllGradesAsync()
         {
             try
             {
-                _context.Grades.Add(model);
+                return await _context.Grades
+                    .Include(g => g.Student)
+                    .Include(g => g.Course)
+                    .OrderByDescending(g => g.GradeId)
+                    .ToListAsync();
+            }
+            catch
+            {
+                return Enumerable.Empty<Grade>();
+            }
+        }
+
+        public async Task<IEnumerable<Course>> GetCoursesByDepartmentAsync(string dept)
+        {
+            try
+            {
+                return await _context.Courses
+                    .Where(c => c.Department == dept)
+                    .ToListAsync();
+            }
+            catch
+            {
+                return Enumerable.Empty<Course>();
+            }
+        }
+
+        public async Task<IEnumerable<object>> GetEnrolledStudentsByCourseAsync(int courseId)
+        {
+            try
+            {
+                return await _context.Enrollments
+                    .Where(e => e.CourseId == courseId && e.EnrollmentStatus == EnrollmentStatus.ENROLLED)
+                    .Select(e => new { StudentId = e.Student.StudentId, Name = e.Student.Name })
+                    .ToListAsync();
+            }
+            catch
+            {
+                return Enumerable.Empty<object>();
+            }
+        }
+
+        public async Task<bool> IsGradeAlreadyExists(int studentId, int courseId)
+        {
+            try
+            {
+                return await _context.Grades.AnyAsync(g => g.StudentId == studentId && g.CourseId == courseId);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> AddGradeAsync(Grade model, string facultyDept)
+        {
+            try
+            {
                 var course = await _context.Courses.FindAsync(model.CourseId);
+                if (course == null || course.Department != facultyDept)
+                    return false;
+
+                _context.Grades.Add(model);
+
                 _context.AcademicRecords.Add(new AcademicRecord
                 {
                     StudentId = model.StudentId,
@@ -36,13 +84,30 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
                     Grade = model.GradeValue,
                     Semester = course.SemesterOffered.ToString()
                 });
+
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch { return false; }
+            catch
+            {
+                return false;
+            }
         }
 
-        public async Task<Grade> GetGradeByIdAsync(int id) => await _context.Grades.FindAsync(id);
+        public async Task<Grade> GetGradeByIdAsync(int id)
+        {
+            try
+            {
+                return await _context.Grades
+                    .Include(g => g.Student)
+                    .Include(g => g.Course)
+                    .FirstOrDefaultAsync(g => g.GradeId == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
         public async Task<bool> UpdateGradeAsync(Grade model)
         {
@@ -75,7 +140,9 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
                 var grade = await _context.Grades.FindAsync(id);
                 if (grade == null) return false;
 
-                var record = await _context.AcademicRecords.FirstOrDefaultAsync(r => r.StudentId == grade.StudentId && r.CourseId == grade.CourseId);
+                var record = await _context.AcademicRecords
+                    .FirstOrDefaultAsync(r => r.StudentId == grade.StudentId && r.CourseId == grade.CourseId);
+
                 if (record != null) _context.AcademicRecords.Remove(record);
 
                 _context.Grades.Remove(grade);
@@ -83,6 +150,22 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
             }
             catch { return false; }
         }
+
+        public async Task<IEnumerable<Grade>> GetGradesByDepartmentAsync(string dept)
+        {
+            try
+            {
+                return await _context.Grades
+                    .Include(g => g.Student)
+                    .Include(g => g.Course)
+                    .Where(g => g.Course.Department == dept)
+                    .OrderByDescending(g => g.GradeId)
+                    .ToListAsync();
+            }
+            catch
+            {
+                return Enumerable.Empty<Grade>();
+            }
+        }
     }
 }
-
