@@ -24,7 +24,7 @@ namespace UniversityAcademicManagementSystem.Controllers
         public IActionResult AddGrade()
         {
             var facultyDept = GetFacultyDepartment();
-            ViewBag.Departments = new List<string> { facultyDept! }; // ✅ Only own dept
+            ViewBag.Departments = new List<string> { facultyDept! };
             return View(new Grade());
         }
 
@@ -33,7 +33,6 @@ namespace UniversityAcademicManagementSystem.Controllers
         {
             var facultyDept = GetFacultyDepartment();
 
-            // 🚫 Department mismatch (UI + security)
             if (!string.IsNullOrEmpty(dept) && dept != facultyDept)
             {
                 ModelState.AddModelError("", "You don't belong to this department.");
@@ -57,7 +56,6 @@ namespace UniversityAcademicManagementSystem.Controllers
                 return View(model);
             }
 
-            // DUPLICATE CHECK
             if (await _facultyService.IsGradeAlreadyExists(model.StudentId, model.CourseId))
             {
                 ModelState.AddModelError("", "Grade already exists for this student in this course.");
