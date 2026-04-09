@@ -43,7 +43,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
             }
             catch
             {
-                return new List<User>(); // Error ke case mein empty list return karega
+                return new List<User>();
             }
         }
 
