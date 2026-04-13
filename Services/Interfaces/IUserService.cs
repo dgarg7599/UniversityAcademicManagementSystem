@@ -6,6 +6,6 @@ namespace UniversityAcademicManagementSystem.Services.Interfaces
     {
         Task<bool> RegisterUserAsync(User model);
         Task<User?> LoginUserAsync(string email, string password);
-        Task<User> GetUserByIdAsync(int id);
+        Task<User?> GetUserByIdAsync(int id);
     }
 }

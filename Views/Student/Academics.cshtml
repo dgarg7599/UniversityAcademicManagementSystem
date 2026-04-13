@@ -82,7 +82,6 @@
                             }
                             @foreach (var item in Model)
                             {
-                                // Inline Point calculation for display
                                 var points = item.GradeValue.ToUpper() switch { "A" => 10, "B" => 8, "C" => 6, "D" => 4, "E" => 2, _ => 0 };
                                 
                                 <tr>

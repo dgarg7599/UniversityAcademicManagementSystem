@@ -94,7 +94,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
             }
         }
 
-        public async Task<Grade> GetGradeByIdAsync(int id)
+        public async Task<Grade?> GetGradeByIdAsync(int id)
         {
             try
             {

@@ -25,7 +25,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
             }
             catch
             {
-                return Enumerable.Empty<Course>(); // Error hone par empty list return karega
+                return Enumerable.Empty<Course>();
             }
         }
 
