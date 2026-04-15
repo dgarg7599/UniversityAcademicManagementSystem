@@ -51,7 +51,7 @@ namespace UniversityAcademicManagementSystem.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("AcademicRecords");
+                    b.ToTable("AcademicRecords", (string)null);
                 });
 
             modelBuilder.Entity("UniversityAcademicManagementSystem.Models.Course", b =>
@@ -84,7 +84,7 @@ namespace UniversityAcademicManagementSystem.Migrations
 
                     b.HasIndex("CourseName");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("UniversityAcademicManagementSystem.Models.Enrollment", b =>
@@ -113,7 +113,7 @@ namespace UniversityAcademicManagementSystem.Migrations
                     b.HasIndex("StudentId", "CourseId")
                         .IsUnique();
 
-                    b.ToTable("Enrollments");
+                    b.ToTable("Enrollments", (string)null);
                 });
 
             modelBuilder.Entity("UniversityAcademicManagementSystem.Models.Grade", b =>
@@ -145,7 +145,7 @@ namespace UniversityAcademicManagementSystem.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Grades");
+                    b.ToTable("Grades", (string)null);
                 });
 
             modelBuilder.Entity("UniversityAcademicManagementSystem.Models.Student", b =>
@@ -187,7 +187,7 @@ namespace UniversityAcademicManagementSystem.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
                 });
 
             modelBuilder.Entity("UniversityAcademicManagementSystem.Models.User", b =>
@@ -222,7 +222,7 @@ namespace UniversityAcademicManagementSystem.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("UniversityAcademicManagementSystem.Models.AcademicRecord", b =>

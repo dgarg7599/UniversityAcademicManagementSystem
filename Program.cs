@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using UniversityAcademicManagementSystem.Data;
+using UniversityAcademicManagementSystem.Models;
 using UniversityAcademicManagementSystem.Services.Implementations;
 using UniversityAcademicManagementSystem.Services.Interfaces;
 
@@ -47,5 +48,21 @@ app.MapControllerRoute(
 	pattern: "{controller=Home}/{action=Index}/{id?}")
 	.WithStaticAssets();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<UniversityDbContext>();
+
+    if (!context.Users.Any(u => u.Email == "admin@abc.com"))
+    {
+        context.Users.Add(new User
+        {
+            Email = "admin@abc.com",
+            Password = BCrypt.Net.BCrypt.HashPassword("Admin@123"),
+            Role = Role.Admin,
+            Department = "Administration"
+        });
+        context.SaveChanges();
+    }
+}
 
 app.Run();

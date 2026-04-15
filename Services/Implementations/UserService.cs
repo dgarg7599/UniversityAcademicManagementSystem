@@ -19,9 +19,21 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
             try
             {
                 var user = await context.Users
-                    .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+                    .FirstOrDefaultAsync(u => u.Email == email);
 
-                return user;
+                if (user == null)
+                {
+                    return null;
+                }
+
+                bool isValid = BCrypt.Net.BCrypt.Verify(password, user.Password);
+
+                if (isValid)
+                {
+                    return user;
+                }
+
+                return null;
             }
             catch
             {
@@ -39,7 +51,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
                 var newUser = new User
                 {
                     Email = model.Email,
-                    Password = model.Password,
+                    Password = BCrypt.Net.BCrypt.HashPassword(model.Password),
                     Role = Role.Student
                 };
 

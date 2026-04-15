@@ -62,7 +62,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
                 var newStaff = new User
                 {
                     Email = model.Email,
-                    Password = model.Password,
+                    Password = BCrypt.Net.BCrypt.HashPassword(model.Password),
                     Role = model.Role,
                     Department = model.Role == Role.Registrar
                         ? "Management"
@@ -95,7 +95,7 @@ namespace UniversityAcademicManagementSystem.Services.Implementations
                 }
 
                 existingUser.Email = model.Email;
-                existingUser.Password = model.Password;
+                existingUser.Password = BCrypt.Net.BCrypt.HashPassword(model.Password);
                 existingUser.Role = model.Role;
 
                 existingUser.Department = model.Role == Role.Registrar
