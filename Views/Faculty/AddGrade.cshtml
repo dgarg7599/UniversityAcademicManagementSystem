@@ -6,13 +6,10 @@
 }
 
 <div class="container py-4">
-    @* Padding kam ki *@
     <div class="row justify-content-center">
-        @* Width ko 7 se 5 kiya taaki compact lage *@
         <div class="col-md-6 col-lg-5">
             <div class="card shadow border-0 rounded-3 overflow-hidden">
                 
-                @* Header ko thoda patla kiya *@
                 <div class="card-header text-white p-3 text-center border-0" style="background-color: #10b981">
                     <h5 class="fw-bold mb-0"><i class="bi bi-mortarboard-fill me-2"></i>Grading Portal</h5>
                 </div>
@@ -24,7 +21,6 @@
                     <form asp-action="AddGrade" method="post">
                         <input type="hidden" name="actionType" id="actionType" value="Save" />
 
-                        @* Sabhi mb-4 ko mb-3 kiya *@
                         <div class="mb-3">
                             <label class="form-label fw-bold text-secondary small text-uppercase" style="letter-spacing: 0.5px;">1. Department</label>
                             <select name="dept" class="form-select border-2 shadow-none bg-light rounded-3"
@@ -74,7 +70,6 @@
                             </div>
 
                             <div class="row g-2">
-                                @* g-3 ko g-2 kiya spacing ke liye *@
                                 <div class="col-sm-4">
                                     <label asp-for="GradeValue" class="form-label fw-bold text-secondary small text-uppercase">Grade</label>
                                     <select asp-for="GradeValue" class="form-select border-2 shadow-none rounded-3">
@@ -107,3 +102,10 @@
         </div>
     </div>
 </div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

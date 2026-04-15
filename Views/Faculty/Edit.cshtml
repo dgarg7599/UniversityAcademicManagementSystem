@@ -19,7 +19,6 @@
                         <input type="hidden" asp-for="StudentId" />
                         <input type="hidden" asp-for="CourseId" />
 
-                        @* Read-only Info: Student & Course badal nahi sakte *@
                         <div class="mb-3 bg-light p-2 rounded-3 border-start border-4 border-success">
                             <label class="text-muted small fw-bold text-uppercase d-block">Student</label>
                             <span class="fw-bold text-dark">@Model.Student?.Name</span>
@@ -33,7 +32,6 @@
 
                         <hr class="my-3 opacity-25">
 
-                        @* Editable Fields *@
                         <div class="row g-2">
                             <div class="col-sm-4">
                                 <label asp-for="GradeValue" class="form-label fw-bold text-secondary small text-uppercase">Grade</label>
@@ -66,3 +64,9 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

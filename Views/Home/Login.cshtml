@@ -72,9 +72,16 @@
     </div>
 </div>
 
-<script>
-    function fillAdmin() {
-        document.getElementsByName("email")[0].value = "admin@abc.com";
-        document.getElementsByName("password")[0].value = "Admin@123";
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-</script>
+
+    <script>
+        function fillAdmin() {
+            document.getElementsByName("email")[0].value = "admin@abc.com";
+            document.getElementsByName("password")[0].value = "Admin@123";
+        }
+    </script>
+}
+
