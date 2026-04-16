@@ -124,7 +124,7 @@ namespace UniversityAcademicManagementSystem.Controllers
 
                     if (!isProfileComplete)
                     {
-                        TempData["Info"] = "Please complete your profile to continue.";
+                        TempData["Info"] = "Please complete your profile to continue!";
                         return RedirectToAction("CompleteProfile", "Student");
                     }
 

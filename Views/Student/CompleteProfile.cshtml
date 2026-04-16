@@ -16,6 +16,13 @@
             <p class="text-muted small">Update your details to unlock the student portal.</p>
         </div>
 
+        @if (TempData["Info"] != null)
+        {
+            <div class="alert alert-success border-0 small py-2 mb-3" style="border-radius: 12px;">
+                @TempData["Info"]
+            </div>
+        }
+
         <form asp-action="CompleteProfile" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
 
