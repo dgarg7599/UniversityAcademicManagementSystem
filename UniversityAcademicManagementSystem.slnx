@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="../Project/UniversityAcademicManagementSystem_Console/UniversityAcademicManagementSystem_Console.csproj" />
+  <Project Path="../Project/UniversityAcademicManagementSystem_WebAPI/UniversityAcademicManagementSystem_WebAPI.csproj" />
   <Project Path="UniversityAcademicManagementSystem.csproj" />
 </Solution>

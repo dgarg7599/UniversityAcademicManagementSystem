@@ -1,0 +1,33 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+## Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## .NET Core / .NET 10
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## NuGet Packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+## SQL Server files
+*.mdf
+*.ldf
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Properties
+Properties/launchSettings.json
